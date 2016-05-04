@@ -1,9 +1,9 @@
 <?php
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    //require(__DIR__ . '/../../common/config/params-local.php'),
+    require(__DIR__ . '/params.php')
+    //require(__DIR__ . '/params-local.php')
 );
 
 return [
@@ -29,6 +29,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'Ic7Z6JJmMLs3OjX0zxCylQJi83iZWmlj',
+        ],
+
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
