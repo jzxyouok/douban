@@ -29,10 +29,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'Ic7Z6JJmMLs3OjX0zxCylQJi83iZWmlj',
-        ],
 
         /*
         'urlManager' => [
