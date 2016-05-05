@@ -1,17 +1,16 @@
 <?php
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require(__DIR__ . '/../../../common/config/'.YII_ENV.'/params.php'),
+    //require(__DIR__ . '/../../common/config/params-local.php'),
+    require(__DIR__ . '/../'.YII_ENV.'/params.php')
+    //require(__DIR__ . '/params-local.php')
 );
 
 return [
-    'id' => 'app-backend',
-    'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
+    'id' => 'app-frontend',
+    'basePath' => dirname(dirname(__DIR__)),
     'bootstrap' => ['log'],
-    'modules' => [],
+    'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -29,7 +28,10 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'ycWfEJNiJ2nT8cHSmqWP8b5p-Gmfk6xn',
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
