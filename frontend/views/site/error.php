@@ -5,16 +5,16 @@
 /* @var $message string */
 /* @var $exception Exception */
 
-use yii\helpers\Html;
+//use yii\helpers\Html;
 
 $this->title = $name;
 ?>
 <div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!--<h1><?/*= Html::encode($this->title) */?></h1>
 
     <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <?/*= nl2br(Html::encode($message)) */?>
     </div>
 
     <p>
@@ -22,6 +22,6 @@ $this->title = $name;
     </p>
     <p>
         Please contact us if you think this is a server error. Thank you.
-    </p>
-
+    </p>-->
+    <div style="text-align:center;"><img src="/assets/images/404.jpg" alt=""/></div>
 </div>
