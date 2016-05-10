@@ -30,6 +30,7 @@ return [
     'bootstrap' => [
         'debug','gii'
     ],
+
     'modules' => [
         'gii' => [
             'class' => 'yii\gii\Module',
